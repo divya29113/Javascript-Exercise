@@ -25,7 +25,7 @@ console.log(trimText.trim());
 console.log(trimS.trimStart());
 console.log(trimE.trimEnd());
 
-//includes it means namma declare panniruka word text la iruka nu pakkum iruntha true illana false
+//includes
 
 let incl="we are learning javascript ";
 console.log(incl.includes("learning"));
@@ -43,7 +43,7 @@ console.log(str.slice(2));
 console.log(str.slice(-12,-2));  //this is not recommend
 
 //substring  slice similar than  but one difference is there
-//the dierence betweeen slice and substring is substringg not support the negative value
+//the difference betweeen slice and substring is substringg not support the negative value
 
 let myStr="This is substring method";
 console.log(myStr.substring(2,12));
@@ -80,3 +80,11 @@ console.log(rep.repeat(5));
 //oneline solution to reverse string
 //reverse string is not have separate function in string method but we have to use split
 console.log("This is reverse method".split("").reverse().join(""));
+
+//string store data by value not reference
+let val="sanjay";
+let val2=val;
+val="Divya"
+val2="vaishu"
+console.log(val);
+console.log(val2)

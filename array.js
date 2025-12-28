@@ -43,4 +43,11 @@ console.log(myNum.sort((a,b)=> a-b));
 //concat Array
 let arrayA=[1,2,3];
 let arrayB=[4,5,6,7];
-console.log(arrayA.concat(arrayB));                                      
+console.log(arrayA.concat(arrayB));              
+
+//Higher Order method in array
+let mapExample=[1,2,3,4,5];
+let multiplyBy10=mapExample.map((a) =>{ 
+    return a*10;
+})
+console.log(multiplyBy10);

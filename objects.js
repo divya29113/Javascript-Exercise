@@ -60,7 +60,7 @@ let myFunc3 = {
 
   console.log(Object.keys(myObj).length);// the interview the given objects how many keys are there to use this method
   console.log(Object.values(myObj));
-  console.log(Object.entries(myObj));//two dimensional array la value kudukum
+  console.log(Object.entries(myObj));
 
   //Object.freeze() & Object.seal()
 
@@ -70,4 +70,4 @@ let myFunc3 = {
 Object.seal(myObj);
 delete myObj.place;
 
-console.log(myObj);//javascript ellamae object even console
+console.log(myObj);

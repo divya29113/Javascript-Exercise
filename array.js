@@ -46,8 +46,23 @@ let arrayB=[4,5,6,7];
 console.log(arrayA.concat(arrayB));              
 
 //Higher Order method in array
+
+//map
+//Map method will return an array with all the elements computed inside the method
 let mapExample=[1,2,3,4,5];
-let multiplyBy10=mapExample.map((a) =>{ 
+let multiplyBy10=mapExample.map((a) =>{ //map method inside call another function that is fat arrow function so it follows higher order function
+    console.log(`This is an element ==>`,a);//it shows how the element hydrated .map return the value in the array
     return a*10;
 })
 console.log(multiplyBy10);
+
+//foreach method
+//Foreach method will always return undefined
+let forEachex=[34,90,87,65];
+let receive=forEachex.forEach((b) =>{
+    console.log("This is for each method",b*2);//we have to multiply inside it
+    ;//it not hydrate the element not return
+});
+console.log(receive);
+
+

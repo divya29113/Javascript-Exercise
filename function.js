@@ -1,4 +1,4 @@
-//function is mini ile to create logic why it use if created one logic we have use to many times
+  //function is mini ile to create logic why it use if created one logic we have use to many times
 //Named function
 function toMakeWordCapitalandTrim(userInput){
     let result=userInput.trim();
@@ -62,3 +62,6 @@ function rest(...a){
     return a;
 }
 console.log(rest(10,20,30,400,780,900));
+
+//Functions in javascript called as first class citizen
+//We can pass function as an argument and also we can return function itself from antoher function.  For these reasons we call function as a first class citizen

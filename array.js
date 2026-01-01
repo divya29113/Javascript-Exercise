@@ -60,9 +60,71 @@ console.log(multiplyBy10);
 //Foreach method will always return undefined
 let forEachex=[34,90,87,65];
 let receive=forEachex.forEach((b) =>{
-    console.log("This is for each method",b*2);//we have to multiply inside it
-    ;//it not hydrate the element not return
+    console.log("This is for each method",b*2);
+    
 });
 console.log(receive);
+ //filter method 
+ //same as perform method to give the value in the array format but we have to filter based on requirements
+ let array1=[12,90,80,65,78,65,54,34,32];
+ let array2=array1.filter((b)=>{ //chatgpt
+    return b >= 20;
+    
+ });
+ 
+console.log(array2);
+
+//reduce--
+//reduce() = combine all values into ONE value
+let red=[,89,76,54,89,90,35];
+let ans=red.reduce((accumulator,element)=>{//Accumulator starts with the initial value provided; otherwise, it starts with the first element of the array.
+    return accumulator+element;
+},0);
+console.log(ans);
+
+//just to know we have pass many parameter inside the method
+let ex=[23,45,67,78];
+let ex1=ex.filter((b,index,arr)=>{   
+    console.log(b, " ",index," ",arr);
+});
 
 
+//find
+let fin=[90,67,54,23,21];
+let answ=fin.find((a)=>{
+    return a===54; 
+});
+console.log(answ);
+
+//find index
+let finIn=[23,45,67,89,90];
+let finIn1=finIn.findIndex((a)=>{
+    return  a > 80;
+});
+console.log(finIn1);
+
+//some
+let ages=[12,34,15,17,18,20];
+let Over18=ages.some((a)=>{
+    return a>20; 
+});
+console.log(Over18);
+
+//every
+let vote=["yes","yes","yes","yes","yes"];
+let isVote=vote.every((a)=>{
+    return a==="yes";
+});
+console.log(isVote);
+
+// '==' vs '===' .  Triple equal to operator is also called strict operator
+
+let a = 68;
+let b = "68";
+console.log(a == b);//double == wil do type coersion check the value if it same
+console.log(a === b);
+
+//flat
+let fla=[1,2,3,[4,5,6],[7,8,9]];
+let flatted=fla.flat(2);
+console.log(flatted); 

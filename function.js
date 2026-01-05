@@ -43,7 +43,7 @@ console.log(process(greet));
 
 //Higher order functions -  Function should accept function itself as an argument or returns a function
 function createMultiplier(x){
-    return function (y){//oru function ae return pannum
+    return function (y){
         return x*y;
 
     }
@@ -64,4 +64,41 @@ function rest(...a){
 console.log(rest(10,20,30,400,780,900));
 
 //Functions in javascript called as first class citizen
-//We can pass function as an argument and also we can return function itself from antoher function.  For these reasons we call function as a first class citizen
+//We can pass function as an argument and also we can return function itself from antoher function.
+//For these reasons we call function as a first class citizen
+
+//ex
+function func(){
+    var a=100; 
+    return a;
+} 
+//console.log(a);
+
+
+//ex
+if (true){
+    var z=90;
+
+}
+console.log(z);//variable can execute
+
+//let,const variable not able to access outer
+function func(){
+    let a=100;
+    return a;
+} 
+//console.log(a);
+
+//closure-lexial scope
+
+function outer(){
+    let count=0;
+    return function inner(){ 
+        count=count+1;
+        return count;
+    }
+}
+let closerOutput=outer(); //actually return the inner function 
+console.log(closerOutput());
+console.log(closerOutput());
+console.log(closerOutput()); 

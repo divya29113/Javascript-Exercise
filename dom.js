@@ -35,15 +35,68 @@ console.log(document.querySelector("#div").innerHTML);
 console.log(document.querySelector("#div").innerHTML);
 
 //set and get attributes
-//attrributes means class ,id 
-console.log(document.querySelector("#ptag").getAttribute("class"));//id ptag select athukula ulla class attribute ulla classname get panren
+//attrributes means class ,id ,style
+console.log(document.querySelector("#ptag").getAttribute("class")); 
 document.querySelector("#ptag").setAttribute("class", "queryselector");//overwrite the class name
 console.log(document.querySelector("#ptag").getAttribute("class"));
 
 
 //event listener
-document.querySel
-
-ector("#btn").addEventListener("click",function(){
-    document.querySelector("#btn-text").textContent="Button Clicked";
+let btn=document.querySelector("#btn");
+let bttext=document.querySelector("#btn-text");
+btn.addEventListener("click",function(){
+    bttext.textContent="Button Clicked";
 });
+
+let mouse=document.querySelector("#mouseover");
+mouse.addEventListener("mouseover",function(){//mouseover is action function inside declaration is reaction
+    mouse.style.color="red";
+    mouse.style.backgroundcolor="black";
+});
+
+mouse.addEventListener("mouseout",function(){
+    mouse.style.color="black";
+    mouse.style.backgroundcolor="white";
+
+});
+
+
+//create element ,append child,remove child
+let newElement=document.createElement("ul");
+let firstChild=document.createElement("li");
+let secondChild=document.createElement("li");
+let thirdChild=document.createElement("li");
+let fourthChild=document.createElement("li");
+
+firstChild.textContent="HTML";
+secondChild.textContent="CSS";
+thirdChild.textContent="JAVASCRIPT";
+fourthChild.textContent="REACT";
+
+let body=document.querySelector("body");
+body.appendChild(newElement);
+newElement.appendChild(firstChild);
+newElement.appendChild(secondChild);
+newElement.appendChild(thirdChild);
+newElement.appendChild(fourthChild);
+
+let createp=document.createElement("p");
+createp.textContent="Html is the basic foundation of web development";
+firstChild.appendChild(createp);
+
+//if you want individual collor of list use this method
+/*firstChild.style.color="blue";
+secondChild.style.color="red";
+thirdChild.style.color="yellow";
+fourthChild.style.color="orange";*/
+
+//if you have same color of all list element use this
+//loop to style li elements
+let liElement=document.querySelectorAll("li");
+for(i=0;i<liElement.length;i++){
+    liElement[i].style.color="purple";
+}
+
+
+
+

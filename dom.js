@@ -47,9 +47,9 @@ let bttext=document.querySelector("#btn-text");
 btn.addEventListener("click",function(){
     bttext.textContent="Button Clicked";
 });
-
+ 
 let mouse=document.querySelector("#mouseover");
-mouse.addEventListener("mouseover",function(){//mouseover is action function inside declaration is reaction
+mouse.addEventListener("mouseover",function(){//mouseover is action unction is reaction
     mouse.style.color="red";
     mouse.style.backgroundcolor="black";
 });
@@ -72,7 +72,7 @@ firstChild.textContent="HTML";
 secondChild.textContent="CSS";
 thirdChild.textContent="JAVASCRIPT";
 fourthChild.textContent="REACT";
-
+ 
 let body=document.querySelector("body");
 body.appendChild(newElement);
 newElement.appendChild(firstChild);
@@ -97,6 +97,14 @@ for(i=0;i<liElement.length;i++){
     liElement[i].style.color="purple";
 }
 
+//style by selecting nth child;
+console.log(liElement[0]);
+
+console.log(newElement.children[0]);
+console.log(btn.nextElementSibling);
+console.log(btn.parentElement);
+console.log(btn.previousElementSibling);
+console.log(newElement.childNodes);
 
 
 
